@@ -276,6 +276,7 @@ a {
 
 .video-box {
     grid-area: video-box;
+    height: 32em
 }
 
 .text-box1 {
