@@ -1,0 +1,251 @@
+/* Globals start */
+* {
+    margin: 0;
+    
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #F1F1F2;
+    font-family: "poppins", sans-serif;
+    width: 100%;
+}
+
+main {
+   margin: 0 80px 0 80px;
+}
+
+a {
+    text-decoration: none;
+    color: #F1F1F2;
+}
+
+ul {
+    list-style: none;
+    padding: 0px;
+}
+/* Globals slut */
+
+/* MOBILE start */ 
+
+/* Burger menu start */
+
+@media only screen and (max-width: 767px) {
+
+main {
+        width: 90vw;
+        margin: auto;
+     }
+
+a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .p-menu1{
+     height: 100%;
+  }
+  
+  
+  
+  
+  /* Hamburger */
+  .hamburger1 {
+    height: 45px;
+    margin: 10px;
+    display: -ms-grid;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    justify-items: end;
+    z-index: 120;
+  }
+  
+  .hamburger1 div {
+    background-color: rgb(61, 61, 61);
+    position: relative;
+    width: 40px;
+    height: 5px;
+    margin-top: 7px;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  #toggle1 {
+    display: none;
+  }
+  
+  #toggle1:checked + .hamburger1 .top {
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    margin-top: 22.5px;
+  }
+  
+  #toggle1:checked + .hamburger1 .meat {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+    margin-top: -5px;
+  }
+  
+  #toggle1:checked + .hamburger1 .bottom {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  
+  #toggle1:checked ~ .menu1 {
+    height: 390px;
+  }
+  
+  
+  /* Menu */
+  .menu1 {
+    width: 100%;
+    background-color: #1E516B;
+    margin: 0;
+    display: -ms-grid;
+    display: grid;
+    grid-template-rows: 1fr repeat(4, 0.5fr);
+    grid-row-gap: 25px;
+    padding: 0;
+    list-style: none;
+    clear: both;
+    width: auto;
+    text-align: center;
+    height: 0px;
+    overflow: hidden;
+    transition: height .4s ease;
+    z-index: 120;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+  
+  .menu1 a:first-child {
+    margin-top: 40px;
+  }
+  
+  .menu1 a:last-child {
+    margin-bottom: 40px;
+  }
+  
+  .link1 {
+    width: 100%;
+    margin: 0;
+    padding: 10px 0;
+    font: 700 20px 'Oswald', sans-serif;
+  }
+  
+  .link1:hover {
+    background-color: #fff;
+    color: rgb(61, 61, 61);
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+
+}
+/* Burger menu slut */
+
+/*Header MOBIL start*/
+.header-heading {
+    min-width: 100%;
+}
+
+.video-box {
+    height: 30em;
+    width: 100%;
+    background-color: #1E516B;
+}
+
+.text-box1 {
+    height: 20em;
+    background-color: #1E516B;
+}
+
+/*Header slut*/
+
+/* Footer start */
+
+.footer-flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-height: 900px;
+    height: auto;
+    width: 100%;
+    background-color: #1E516B;
+    border-radius: 70px 70px 0 0;
+    color: white;
+}
+
+.footer-list-styling {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 50px;
+    width: 300px;
+    flex: 1;
+}
+
+.last-element {
+    order: 999;
+    margin-bottom: 50px;
+}
+
+.text-max-w {
+    max-width: 300px;
+}
+
+.strong-font-footer {
+    font-weight: 600;
+}
+
+.nav-styling {
+    display: none;
+}
+
+/* Footer slut */
+
+/* MOBILE slut */ 
+
+@media only screen and (min-width: 767px) {
+    
+
+/* Header DESKTOP start */
+
+/* nav DESKTOP start */
+#navbar.navigation {
+    display: none;
+}
+
+.nav-styling {
+    display: flex;
+}
+
+.nav-img {
+    margin: 30px 80px 0 80px ;
+}
+.nav-list {
+    display:flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    width: 100%;
+    justify-content: end;
+    margin: 30px 80px 0 80px ;
+}
+/* nav DESKTOP slut */
+.header-styling  {
+    
+    height: 100vh;
+     
+}
+
+.header-content {
+    margin: 30px 80px 0 80px ;
+}
+/* Header DESKTOP slut */
+
+/* Footer DESKTOP start */
+.last-element {
+    order: 0;
+}
+/* Footer slut */
+}
