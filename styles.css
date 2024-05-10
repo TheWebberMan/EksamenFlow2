@@ -146,17 +146,36 @@ a {
 /*Header MOBIL start*/
 .header-heading {
     min-width: 100%;
+    margin-bottom: 16px;
+}
+
+.videobox-grid {
+    display: grid;
+    grid-template-columns: 3;
+    grid-template-areas: 
+    "video-box"
+    "text-box2"
+    "text-box3";
+    gap: 32px;
 }
 
 .video-box {
     height: 30em;
     width: 100%;
     background-color: #1E516B;
+    border-radius: 40px;
 }
 
 .text-box1 {
-    height: 20em;
+    height: 15em;
     background-color: #1E516B;
+    border-radius: 40px;
+}
+
+.text-box2 {
+    height: 15em;
+    background-color: #1E516B;
+    border-radius: 40px;
 }
 
 /*Header slut*/
@@ -173,6 +192,11 @@ a {
     background-color: #1E516B;
     border-radius: 70px 70px 0 0;
     color: white;
+
+
+    margin-top: 6000px;
+
+
 }
 
 .footer-list-styling {
@@ -241,6 +265,26 @@ a {
 .header-content {
     margin: 30px 80px 0 80px ;
 }
+
+.videobox-grid {
+    display: grid;
+    grid-template-areas: 
+    "video-box video-box text-box1"
+    "video-box video-box text-box2";
+    gap: 32px;
+}
+
+.video-box {
+    grid-area: video-box;
+}
+
+.text-box1 {
+grid-area: text-box1;
+}
+
+.text-box2 {
+    grid-area: text-box2;
+    }
 /* Header DESKTOP slut */
 
 /* Footer DESKTOP start */
