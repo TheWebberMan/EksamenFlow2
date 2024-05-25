@@ -167,7 +167,9 @@ a {
   }
   
   #toggle1:checked ~ .menu1 {
-    height: 350px;
+    height: 70dvh;
+    /* position: fixed;
+    top: 40px; */
   }
   
   
@@ -2019,4 +2021,14 @@ button:hover {
 /* Layout for titles and content */
 .hoverMegamenu > ul.subnav > div {
     flex: 1;
+}
+
+
+
+.active-continent {
+    background-color: #ddd; /* Lys grå for at fremhæve det åbne kontinent */
+}
+
+.continent-menu {
+    display: none; /* Skjuler kontinenterne som standard */
 }

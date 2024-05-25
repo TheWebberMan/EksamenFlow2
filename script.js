@@ -23,6 +23,51 @@ function displayCountries(countries) {
 }
 
 
+// Funktion til at vise destinationer, Den er display: none; som default i css.
+document.addEventListener('DOMContentLoaded', function() {
+    const dropdownToggle = document.querySelector('.dropdown-toggle');
+    const continents = document.querySelectorAll('.continent-menu');
+
+    dropdownToggle.addEventListener('click', function() {
+        continents.forEach(continent => {
+            continent.style.display = continent.style.display === 'none' ? 'block' : 'none';
+        });
+    });
+});
+
+
+
+document.querySelectorAll('.continent-menu p').forEach(item => {
+    item.addEventListener('click', function() {
+        // Fjern active-continent klassen fra alle kontinenter
+        document.querySelectorAll('.continent-menu p').forEach(p => {
+            p.classList.remove('active-continent');
+        });
+
+        // Skjul alle lande menuer
+        document.querySelectorAll('.continent-menu .countries').forEach(country => {
+            country.style.display = 'none';
+        });
+
+        // Vis denne continents lande, hvis de var skjult
+        const countriesDiv = this.nextElementSibling;
+        if (countriesDiv.style.display === 'none') {
+            countriesDiv.style.display = 'block';
+            this.classList.add('active-continent'); // Tilføj klassen kun hvis kontinentet åbnes
+        } else {
+            countriesDiv.style.display = 'none';
+            this.classList.remove('active-continent'); // Fjern klassen hvis kontinentet lukkes
+        }
+    });
+});
+
+
+  
+  
+  
+
+
+
 var swiper = new Swiper(".slide-content", {
     slidesPerView: 3,
     spaceBetween: 25,
@@ -155,28 +200,6 @@ showQuestion();
 
 /* quiz slut */
 
-// dropdown menu test
-
-document.addEventListener('DOMContentLoaded', function() {
-    var dropdownToggles = document.querySelectorAll('.dropdown-toggle');
-    var nestedToggles = document.querySelectorAll('.nested-toggle');
-  
-    dropdownToggles.forEach(function(toggle) {
-      toggle.addEventListener('click', function(event) {
-        event.preventDefault();
-        var dropdownMenu = toggle.nextElementSibling;
-        dropdownMenu.classList.toggle('show');
-      });
-    });
-  
-    nestedToggles.forEach(function(toggle) {
-      toggle.addEventListener('click', function(event) {
-        event.preventDefault();
-        var nestedMenu = toggle.nextElementSibling;
-        nestedMenu.classList.toggle('show');
-      });
-    });
-  });
 
   // pop-up destination MOBIL
 
@@ -189,6 +212,3 @@ document.addEventListener('DOMContentLoaded', function() {
     var popup = document.getElementById("popup" + showcaseId.slice(-1));
     popup.style.display = "none";
   }
-
-
-
