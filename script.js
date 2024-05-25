@@ -1,4 +1,29 @@
- 
+document.querySelectorAll('.continent').forEach(item => {
+    item.addEventListener('click', function() {
+        document.querySelectorAll('.continent').forEach(c => c.classList.remove('active'));
+        this.classList.add('active'); // Set active class on clicked continent
+        const continent = this.getAttribute('data-continent');
+        const countries = getCountriesByContinent(continent);
+        displayCountries(countries);
+    });
+});
+
+function getCountriesByContinent(continent) {
+    // Example data - replace with actual data fetching logic
+    const data = {
+        'Asia': ['China', 'India', 'Japan', 'South Korea', 'Thailand'],
+        'Europe': ['Germany', 'France', 'Italy', 'Spain', 'United Kingdom'],
+        'Africa': ['Nigeria', 'Egypt', 'South Africa', 'Morocco', 'Kenya']
+    };
+    return data[continent];
+}
+
+function displayCountries(countries) {
+    const displayDiv = document.querySelector('.displayCountries');
+    displayDiv.innerHTML = countries.map(country => `<p>${country}</p>`).join('');
+}
+
+
 var swiper = new Swiper(".slide-content", {
     slidesPerView: 3,
     spaceBetween: 25,
@@ -168,24 +193,3 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-  document.querySelectorAll('.continent').forEach(item => {
-    item.addEventListener('click', function() {
-        const continent = this.getAttribute('data-continent');
-        const countries = getCountriesByContinent(continent); // Function to fetch countries
-        displayCountries(countries);
-    });
-});
-
-function getCountriesByContinent(continent) {
-    const data = {
-        'Asia': ['China', 'India', 'Japan', 'South Korea', 'Thailand'],
-        'Europe': ['Germany', 'France', 'Italy', 'Spain', 'United Kingdom'],
-        'Africa': ['Nigeria', 'Egypt', 'South Africa', 'Morocco', 'Kenya']
-    };
-    return data[continent];
-}
-
-function displayCountries(countries) {
-    const displayDiv = document.querySelector('.displayCountries');
-    displayDiv.innerHTML = countries.map(country => `<p>${country}</p>`).join('');
-}

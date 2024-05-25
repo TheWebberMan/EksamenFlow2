@@ -1969,13 +1969,11 @@ button:hover {
 
 
 
-
 .hoverMegamenu {
     overflow: hidden;
+    font-family: Arial, sans-serif; /* Ensuring font consistency */
+    padding: 2em 0;
 }
-
-
-
 
 .hoverMegamenu:hover ul.subnav {
     visibility: visible;
@@ -1985,20 +1983,40 @@ button:hover {
     z-index: 99;
     width: 40vw;
     overflow: hidden;
-
 }
 
-
 .hoverMegamenu > ul.subnav {
-    /*    border: 1px solid green;*/
     visibility: hidden;
     position: absolute;
     display: flex;
     flex-direction: row;
-    top: 66px;
-    background: red;
+    top: 76px;
+    background: white; /* Changed from red to white */
     box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.15);
     border-radius: 12px;
     opacity: 0;
-    transition: all 0.2s ease;
+    transition: all 0.3s ease; /* Smoother transition */
+    padding: 20px; /* Added padding */
+}
+
+.continent, .displayCountries p {
+    cursor: pointer; /* Makes it clear they are clickable */
+    margin: 10px 20px; /* Added margin for spacing */
+}
+
+.continent.active {
+    color: blue; /* Change this to the color you prefer for active state */
+}
+
+/* Styling for the Continent and Countries titles */
+.section-title {
+    font-size: 16px;
+    font-weight: bold;
+    border-bottom: 2px solid black;
+    margin-bottom: 10px;
+}
+
+/* Layout for titles and content */
+.hoverMegamenu > ul.subnav > div {
+    flex: 1;
 }
