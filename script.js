@@ -1,7 +1,7 @@
 document.querySelectorAll('.continent').forEach(item => {
     item.addEventListener('click', function() {
         document.querySelectorAll('.continent').forEach(c => c.classList.remove('active'));
-        this.classList.add('active'); // Set active class on clicked continent
+        this.classList.add('active'); 
         const continent = this.getAttribute('data-continent');
         const countries = getCountriesByContinent(continent);
         displayCountries(countries);
@@ -9,7 +9,6 @@ document.querySelectorAll('.continent').forEach(item => {
 });
 
 function getCountriesByContinent(continent) {
-    // Example data - replace with actual data fetching logic
     const data = {
         'Asia': ['China', 'India', 'Japan', 'South Korea', 'Thailand'],
         'Europe': ['Germany', 'France', 'Italy', 'Spain', 'United Kingdom'],
