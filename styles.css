@@ -26,7 +26,7 @@ ul {
 }
 
 h1 {
-    font-size: 70px;
+    font-size: 44px;
     font-weight: 400;
     font-style: normal;
     line-height: 48px;
@@ -48,8 +48,8 @@ h3 {
 }
 
 h4 {
-    font-weight: 400;
-    font-size:70px;
+    font-weight: 300;
+    font-size:28px;
     font-style: normal;
     color: #2D2F30;
 }
@@ -67,6 +67,13 @@ p {
 
 @media only screen and (min-width: 767px) {
 
+    h1 {
+        font-size: 70px;
+        font-weight: 400;
+        font-style: normal;
+        line-height: 82px;
+    }
+
     h2 {
         font-size: 70px;
         font-weight: 400;
@@ -79,6 +86,14 @@ p {
         font-weight: 400;
         font-style: normal;
         line-height: 44px;
+    }
+
+    h4 {
+        font-weight: 400;
+        font-size:28px;
+        line-height: 36px;
+        font-style: normal;
+        color: #2D2F30;
     }
 }
 
@@ -111,7 +126,7 @@ a {
   
   /* Hamburger */
   .hamburger1 {
-    height: 45px;
+    height: 30px;
     margin: 10px;
     display: -ms-grid;
     display: grid;
@@ -121,10 +136,10 @@ a {
   }
   
   .hamburger1 div {
-    background-color: rgb(61, 61, 61);
+    background-color: #1E516B;
     position: relative;
     width: 40px;
-    height: 5px;
+    height: 3px;
     margin-top: 7px;
     -webkit-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
@@ -152,7 +167,7 @@ a {
   }
   
   #toggle1:checked ~ .menu1 {
-    height: 390px;
+    height: 350px;
   }
   
   
@@ -161,14 +176,14 @@ a {
     width: 100%;
     background-color: #1E516B;
     margin: 0;
+    border-radius: 40px;
     display: -ms-grid;
     display: grid;
-    grid-template-rows: 1fr repeat(4, 0.5fr);
+    grid-template-rows: 1fr repeat(3, 0.7fr);
     grid-row-gap: 25px;
     padding: 0;
     list-style: none;
     clear: both;
-    width: auto;
     text-align: center;
     height: 0px;
     overflow: hidden;
@@ -191,14 +206,78 @@ a {
     margin: 0;
     padding: 10px 0;
     font: 700 20px 'Oswald', sans-serif;
+    
   }
   
-  .link1:hover {
-    background-color: #fff;
-    color: rgb(61, 61, 61);
-    -webkit-transition: all 0.3s ease;
-    transition: all 0.3s ease;
+  
+
+  /* dropwdown test */
+
+  .dropdown {
+    position: relative;
+    display: inline-block;
   }
+  
+  .dropdown-toggle {
+    cursor: pointer;
+  }
+  
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #1E516B;
+    min-width: 160px;
+    z-index: 1;
+    text-align: left;
+  }
+  
+  .dropdown-menu a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-menu a:hover {
+    background-color: #575757;
+  }
+  
+  /* Nested dropdown menu styles */
+  .nested-dropdown {
+    position: relative;
+  }
+  
+  .nested-menu {
+    display: none;
+    position: absolute;
+    left: 100%;
+    top: 0;
+    background-color: #1E516B;
+    min-width: 160px;
+    z-index: 1;
+  }
+  
+  .nested-dropdown:hover .nested-menu {
+    display: block;
+  }
+  
+  /* Show the dropdown menu on hover for desktop */
+  .dropdown:hover .dropdown-menu {
+    display: block;
+  }
+  
+  /* Responsive styles for mobile */
+  @media (max-width: 767px) {
+    .dropdown-menu, .nested-menu {
+      position: relative;
+    }
+    
+    .dropdown-menu.show, .nested-menu.show {
+      display: block;
+    }
+  }
+
+  /* dropdown test */
 
 }
 /* Burger menu slut */
@@ -453,7 +532,6 @@ a {
    }
  
    .next-slide {
-     transform: scale(1.2);
      cursor: pointer;
    }
 
@@ -607,7 +685,6 @@ grid-area: text-box1;
 .js-cards {
     /* margin: auto;
     width: 100%; */
-    margin-bottom: 140px;
 }
 
 .card-text-flex {
@@ -867,6 +944,471 @@ grid-area: text-box1;
 
 /* Destination MOBIL infotext / pros/cons slut */
 
+/* Destinationer pros/cons pop-up MOBIL start */
+
+.destination-realtive {
+    position: relative;
+}
+
+.pop-up-knap {
+    position: fixed;
+    right: 20px;
+    bottom: 50px;
+    /* background: linear-gradient(to bottom, #9BD1C2 40%, #F0C1BD 60%); */
+    background: #1E516B;
+    color:white;
+    font-size: 20px;
+    border-radius: 50%;
+    line-height: 20px;
+    font-weight: 600;
+    z-index: 99;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+    padding-top: 60px;
+  }
+  
+  /* Popup content */
+  .popup-content {
+    background-color: #1E516B;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 90vw;
+    border-radius: 40px;
+    position: relative;
+  }
+
+  .proscons-icon-text-flex-popup {
+    display: flex; 
+    gap: 10px;
+    color: white;
+  }
+
+  .proscons-text-popup {
+    align-self: center;
+    color: white;
+  }
+  
+  /* Close button */
+  .close {
+    color: white;
+    position: absolute;
+    top: 5px;
+    right: 20px;
+    
+    font-size: 38px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  /* showcase test */
+
+  /*  Destinationer pros/cons pop-up MOBIL slut */
+
+/* REJSETIPS MOBIL start */ 
+
+/* Rejsetips MOBIL header grid start */
+
+.rejsetips-header-grid {
+
+        display: grid;
+        grid-template-areas: 
+        "rejsetips-header-text"
+        "text-box1-rejsetips"
+        "text-box2-rejsetips"
+        "video-box-rejsetips"
+        ;
+        gap: 40px;
+        width: 90vw;
+        margin: auto;
+        margin-top: 40px;
+        max-width: 1500px;
+    
+}
+
+/* Rejsetips MOBIL header grid slut */
+
+/* Rejsetips MOBIL header start */
+
+.rejsetips-header-text {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    grid-area: rejsetips-header-text;
+}
+
+.text-box1-rejsetips {
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    background-color: #1E516B;
+    border-radius: 40px;
+    position: relative;
+    box-shadow: 0px 10px 5px -3px rgba(16, 24, 40, 0.10);
+    grid-area: text-box1-rejsetips;
+}
+
+.text-box2-rejsetips {
+    height: 300px;
+    background-color: #466B73;
+    border-radius: 40px;
+    position: relative;
+    box-shadow: 0px 10px 5px -3px rgba(16, 24, 40, 0.10);
+    grid-area: text-box2-rejsetips;
+}
+
+.video-box-rejsetips {
+    height: 519px;
+    width: 100%;
+    background-image: url('https://i.ibb.co/vBF4gBj/a98658b1aff2117b0985235f330c17bc-2.webp'); 
+    background-color: #1E516B;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 40px;
+    position: relative;
+    box-shadow: 0px 10px 5px -3px rgba(16, 24, 40, 0.10);
+}
+
+.video-text-box-rejsetips {
+    width:90%;
+    height: 202px;
+    padding: 16px;
+    border-radius: 24px;
+    border: 1px solid rgba(165, 185, 196, 0.30);
+    background-image: linear-gradient(to right, #7897A6B2, #123140B2);
+    position: absolute;
+    inset: 0;
+    margin: 300px auto 0 auto;
+    color: white;
+    backdrop-filter: blur(2px); 
+}
+
+/* Rejsetips MOBIL header slut */
+
+/*Rejsetips MOBIL body big grid start */
+
+.rejsetips-big-grid {
+    display: grid;
+    grid-template-areas: 
+    "pakke-flex"
+    "js-cards-tips"
+    "h2-text-rejsetips"
+    "quiz-flex"
+    "checkliste-flex"
+    "js-cards"
+    ;
+    gap: 140px;
+    margin: 140px auto 0 auto;
+    max-width: 1500px;
+    width: 90vw;
+}
+
+/*Rejsetips MOBIL body big grid slut */
+
+/* Rejsetips MOBIL pakke sektion start */
+
+
+.pakke-flex {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    grid-area: pakke-flex;
+}
+
+.pakke-text-flex {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.pakke-titel-flex {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.pakke-video {
+    height: 300px;
+    background-color: #1E516B;
+    border-radius: 40px;
+    width: 100%;
+}
+
+.pakke-stor-text {
+    font-weight: 500;
+    font-size: 18px;
+}
+
+/* Rejsetips MOBIL pakke sektion slut */
+
+/* Rejstips Js-cards-tips MOBIL start */
+
+.tips-grid {
+    display: none;
+}
+
+.js-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    
+    margin: auto; 
+}
+
+ /* no circle */
+
+ .card-text-flex {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1500px;
+    width: 90vw;
+}
+
+ .slide-container{
+    width: 100%;
+    padding: 40px 0;
+  }
+  .slide-content{
+    margin: 0 40px;
+    overflow: hidden;
+    border-radius: 25px;
+    
+  }
+  .card{
+    border-radius: 25px;
+    
+  }
+
+  .js-cards-tips-text-flex {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    color: white;
+    margin: 10px 15px 0 15px;
+    gap: 10px;
+    border-radius: 40px;
+    padding: 20px 20px 60px 20px;
+    position: relative;
+  }
+  
+  .image-content{
+    position: relative;
+    row-gap: 5px;
+    
+  }
+  
+  .overlay::before,
+  .overlay::after{
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: -40px;
+    height: 40px;
+    width: 40px;
+    
+  }
+
+  
+  .card-image-tips .card-img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    
+    border-radius: 40px;
+    
+  }
+
+  .button-flex {
+    display: flex;
+    transform: translatex(15px);
+    margin-top: 30px;
+    width: 100%;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .prev-slide, .next-slide {
+   max-height: 37.2px;
+  }
+
+  .prev-slide {
+    transform: rotate(180deg);
+    cursor: pointer;
+   }
+ 
+   .next-slide {
+     cursor: pointer;
+   }
+
+  .fly-streg-icon {
+    display: flex;
+    width: 100%;
+    justify-content: end;
+    align-items: center;
+  }
+
+  .fly-icon {
+    margin-right: 20px;
+    transform: translateX(-10px) ;
+  }
+
+  .streg {
+    width: 100%;
+    height: 2px;
+    background-color: #1E516B;
+  }
+
+  
+  @media screen and (max-width: 768px) {
+    .slide-content{
+      margin: 0 10px;
+    }
+    .swiper-navBtn{
+      display: none;
+    }
+  }
+
+/* Rejstips Js-cards-tips MOBIL slut */
+
+/* h2 MOBIL text rejsetips start */
+
+.h2-text-rejsetips {
+    text-align: center;
+    line-height: 82px;
+    max-width: 700px;
+    margin: auto;
+    grid-area: h2-text-rejsetips;
+}
+
+/* h2 MOBIL text rejsetips slut */
+
+/* quiz MOBIL rejsetips start */
+
+.quiz-flex {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.quiz-text-flex {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 100%;
+}
+
+.quiz-container {
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    background-color: #1E516B;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color:white;
+}
+
+.mobil-text {
+    font-size: 27px;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.quiz-streg {
+    width: 90%;
+    height: 2px;
+    background-color: #A5B9C4;
+    margin: 0 auto 10px auto;
+    opacity: 0.4;
+}
+
+button {
+    padding: 10px 20px;
+    margin-top: 10px;
+    border: none;
+    background-color: #FFFFFF;
+    color: black;
+    border-radius: 40px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #A5B9C4;
+    color: white;
+}
+
+.question {
+    font-weight: bold;
+}
+
+.reset-button {
+    display: none;
+    text-align: center;
+}
+
+/* Updated styling for result */
+.result {
+    font-size: 1.2em;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
+    border: 2px solid #007bff;
+    border-radius: 10px;
+}
+
+/* quiz MOBIL rejsetips slut */
+
+/* checkliste MOBIL rejsetips start */
+.checkliste-flex {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.checkliste-img {
+    width: 100%;
+    height: 300px;
+    border-radius: 40px;
+}
+
+.checkliste-text-flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 600px;
+    gap: 10px;
+}
+
+.checkliste-button {
+    background-color: #1E516B;
+    padding: 10px 16px;
+    width: 250px;
+    color: white;
+    border-radius: 72px;
+}
+/* checkliste MOBIL rejsetips slut */
+
+/* REJSETIPS MOBIL slut */
+
 /* Mobil slut */
 
 
@@ -971,6 +1513,10 @@ grid-area: text-box1;
     object-fit: cover;
 }
 
+.pop-up-knap {
+    display: none;
+}
+
 .proscons-flex {
     display: flex;
     flex-direction: column;
@@ -1036,6 +1582,317 @@ grid-area: text-box1;
     color: white;
 }
 /* Destination DEKSTOP infotext / pros/cons slut */
+
+/* REJSETIPS DESKTOP start */ 
+
+/* Rejsetips DESKTOP header grid start */
+
+.rejsetips-header-grid {
+
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr;
+    grid-template-areas: 
+    "rejsetips-header-text text-box1-rejsetips text-box2-rejsetips"
+    "rejsetips-header-text video-box-rejsetips video-box-rejsetips"
+    ;
+    gap: 30px;
+    width: 90vw;
+    margin: auto;
+    margin-top: 40px;
+    max-width: 1500px;
+    max-height: 100vh;
+
+}
+
+/* Rejsetips DESKTOP header grid slut */
+
+/* Rejsetips DESKTOP header start */
+
+.rejsetips-header-text {
+    display: flex;
+    justify-content: center;
+}
+
+.video-box-rejsetips {
+    grid-area: video-box-rejsetips;
+    max-height: 400px;
+}
+
+.video-text-box-rejsetips {
+    margin: 195px auto 0 auto; 
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+    height: 170px;
+}
+
+.text-box1-rejsetips {
+    grid-area: text-box1-rejsetips;
+}
+
+.text-box2-rejsetips {
+    grid-area: text-box2-rejsetips;
+}
+/* Rejsetips DESKTOP header slut */
+
+/*Rejsetips DESKTOP body big grid start */
+
+.rejsetips-big-grid {
+    display: grid;
+    grid-template-areas: 
+    "pakke-flex"
+    "tips-grid"
+    "h2-text-rejsetips"
+    "quiz-flex"
+    "checkliste-flex"
+    "js-cards";
+    gap: 140px;
+    margin: 140px auto 0 auto;
+    max-width: 1500px;
+    width: 90vw;
+}
+
+/*Rejsetips DESKTOP body big grid slut */
+
+/* Rejsetips DESKTOP pakke sektion start */
+
+
+.pakke-flex {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    grid-area: pakke-flex;
+}
+
+.pakke-video {
+    height: 500px;
+    background-color: #1E516B;
+    border-radius: 40px;
+    width: 50%;
+}
+
+.pakke-text-flex {
+    width: 50%;
+}
+/* Rejsetips DESKTOP pakke sektion slut */
+
+/* Rejsetips DESKTOP rejsetips start */
+
+.js-cards-tips {
+    display: none;
+}
+
+.tips-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+        "nyttige-tips-flex bank-box-flex bank-box-flex lavsaeson-box-flex"
+        "invester-box-flex destination-box-flex destination-box-flex lavsaeson-box-flex"
+        "paklet-box-flex paklet-box-flex pakke-box-flex rejseforsikring-box-flex "
+        "wifi-box-flex tjek-box-flex pakke-box-flex sikkerhed-box-flex";
+        gap: 28px;
+        width: 90vw;
+        margin: auto;
+        max-width: 1500px;
+        grid-area: tips-grid;
+}
+
+.nyttige-tips-flex {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: auto;
+    gap: 5px;
+    grid-area: nyttige-tips-flex;
+    
+}
+
+.invester-box-flex {
+    position: relative;
+    height: auto;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    grid-area: invester-box-flex;
+    background-color: #048C66;
+    padding: 20px 20px 50px 20px;
+    border-radius: 40px;
+}
+
+.bank-box-flex {
+    position: relative;
+    height: auto;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    grid-area: bank-box-flex;
+    background-color: #D9645A;
+    padding: 20px 20px 50px 20px;
+    border-radius: 40px;
+    
+}
+
+.lavsaeson-box-flex {
+    position: relative;
+    height: auto;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    grid-area: lavsaeson-box-flex;
+    background-color: #C26D3D;
+    padding: 20px 20px 50px 20px;
+    border-radius: 40px;
+   
+}
+
+.destination-box-flex {
+    position: relative;
+    height: auto;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    grid-area: destination-box-flex;
+    background-color: #123140;
+    padding: 20px 20px 50px 20px;
+    border-radius: 40px;
+   
+}
+
+.paklet-box-flex {
+    position: relative;
+    height: auto;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    grid-area: paklet-box-flex;
+    background-color: #91522E;
+    padding: 20px 20px 50px 20px;
+    border-radius: 40px;
+   
+}
+
+.pakke-box-flex {
+    position: relative;
+    height: auto;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    grid-area: pakke-box-flex;
+    background-color: #02543D;
+    padding: 20px 20px 50px 20px;
+    border-radius: 40px;
+    
+}
+
+.rejseforsikring-box-flex {
+    position: relative;
+    height: auto;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    grid-area: rejseforsikring-box-flex;
+    background-color: #466B73;
+    padding: 20px 20px 50px 20px;
+    border-radius: 40px;
+    
+}
+
+.wifi-box-flex {
+    position: relative;
+    height: auto;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    grid-area: wifi-box-flex;
+    background-color: #E1837B;
+    padding: 20px 20px 50px 20px;
+    border-radius: 40px;
+    
+}
+
+.tjek-box-flex {
+    position: relative;
+    height: auto;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    grid-area: tjek-box-flex;
+    background-color: #5D8E99;
+    padding: 20px 20px 50px 20px;
+    border-radius: 40px;
+    
+}
+
+.sikkerhed-box-flex {
+    position: relative;
+    height: auto;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    grid-area: sikkerhed-box-flex;
+    background-color: #AE5048;
+    padding: 20px 20px 50px 20px;
+    border-radius: 40px;
+    
+}
+/* Rejsetips DESKTOP rejsetips slut */
+
+/* h2 DESKTOP text rejsetips start */
+
+.h2-text-rejsetips {
+    text-align: center;
+    line-height: 82px;
+    max-width: 700px;
+    margin: auto;
+}
+
+/* h2 DESKTOP text rejsetips slut */
+
+/* quiz DESKTOP rejsetips */
+
+.quiz-flex {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+}
+
+.quiz-text-flex {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 45%;
+}
+
+/* quiz DESKTOP rejsetips */
+
+/* checkliste DESKTOP start */
+
+.checkliste-flex {
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+}
+
+.checkliste-img {
+    width: 100%;
+    height: 500px;
+    border-radius: 40px;
+}
+
+/* checkliste DESKTOP slut */
+
+/* REJSETIPS DESKTOP slut */
 }
 /* Desktop slut */
 
@@ -1072,7 +1929,6 @@ grid-area: text-box1;
     gap: 10px;
     margin-top: 50px;
     width: 230px;
-    flex: 1;
 }
 
 .last-element {
@@ -1102,4 +1958,47 @@ grid-area: text-box1;
     order: 0;
 }
 /* Footer DESKTOP slut */
+}
+
+
+
+
+
+
+
+
+
+
+
+.hoverMegamenu {
+    overflow: hidden;
+}
+
+
+
+
+.hoverMegamenu:hover ul.subnav {
+    visibility: visible;
+    opacity: 1;
+    top: 84px;
+    right: 20px;
+    z-index: 99;
+    width: 40vw;
+    overflow: hidden;
+
+}
+
+
+.hoverMegamenu > ul.subnav {
+    /*    border: 1px solid green;*/
+    visibility: hidden;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    top: 66px;
+    background: red;
+    box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.15);
+    border-radius: 12px;
+    opacity: 0;
+    transition: all 0.2s ease;
 }
