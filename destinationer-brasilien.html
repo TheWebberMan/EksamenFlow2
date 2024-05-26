@@ -33,16 +33,40 @@
           </nav>
           </section>
           
-        <nav class="nav-styling">
+          <nav class="nav-styling">
             <div class="nav-img">
-                <img src="https://i.ibb.co/Rh8DDmm/placeholder.jpg" alt="">
+                <img src="https://i.ibb.co/wNbtkJt/Logo.png" alt="">
             </div>
-                <ul class="nav-list">
-                    <li><a style="color:black;" href="">Hjem</a></li>
-                    <li><a style="color:black;" href="">Destination</a></li>
-                    <li><a style="color:black;" href="">Rejsetips</a></li>
-                    <li><a style="color:black;" href="">Ressourcer</a></li>
-                </ul>
+            <ul class="nav-list">
+                <li><a style="color:black;" href="">Hjem</a></li>
+                <li class="hoverMegamenu">
+                    <a style="color:black;" href="#">Destination</a>
+                    <ul class="subnav">
+                        <div>
+                            <div class="section-title">Kontinent</div>
+                            <p class="continent" data-continent="Asia">Asien</p>
+                            <p class="continent" data-continent="Europe">Europa</p>
+                            <p class="continent" data-continent="Southamerica">Sydamerika</p>
+                        </div>
+                        <div>
+                            <div class="section-title2">Land</div>
+                            <div class="displayCountries" id="country-links"></div>
+                        </div>
+                    </ul>
+                </li>
+                <li><a style="color:black;" href="">Rejsetips</a></li>
+                
+                <li class="hoverResourceDropdown">
+                    <a style="color:black;" href="">Nyttige links</a>
+                    <ul class="resource-dropdown">
+                        <li><a href="https://um.dk/" target="_blank">Udenringsministeriet</a></li>
+                        <li><a href="https://www.rejseforsikringsguiden.dk/" target="_blank">rejseforsikringsguiden</a></li>
+                        <li><a href="https://www.valutakurser.dk/" target="_blank">valutakurser</a></li>
+                        <li><a href="https://www.momondo.dk/" target="_blank">momondo</a></li>
+                        <li><a href="https://www.trivago.com/" target="_blank">trivago</a></li>
+                    </ul>
+                </li>
+            </ul>
         </nav>
 
      <section class="destinationer-header-grid">
@@ -51,7 +75,7 @@
             <h3 style="color: white;">
                 Brasilien
             </h3>
-            <p>
+            <p class="white-text">
                 Brasilien er et betagende mangfoldigt land, hvor du finder alt fra dybgrønne regnskove og eksotiske strande, livlige storbyer, farverige kulturer og festivaler, enestående kulinariske oplevelser, pulserende sambarytmer og et mangfoldigt natteliv.
             </p>
         </div>
@@ -69,7 +93,7 @@
         <img class="euro-icon" src="https://i.ibb.co/kyBjXLN/image.png" alt="">
         <div class="white-text text-box1-flex">
             <h3 style="color: #FFF;">Real</h3>
-            <p>Realen (R$) er den officielle valuta i Brasilien. Det er den primære valuta, der anvendes til alle former for transaktioner i landet. Klik her for at konvertere en anden valuta til brasilianske real (BRL).</p>
+            <p class="white-text">Realen (R$) er den officielle valuta i Brasilien. Det er den primære valuta, der anvendes til alle former for transaktioner i landet. Klik her for at konvertere en anden valuta til brasilianske real (BRL).</p>
         </div>
        <a href="">
         <div class="knap-pil">
@@ -205,7 +229,7 @@
      </div>
      </section>
 
-     <section class="js-cards">
+     <section style="margin-bottom: 140px;" class="js-cards">
         <div class="card-text-flex">
          <h3>Din næste destination</h3>
          <p class="card-text">Få den bedste inspiration og lær om vores udvalgte destinationer samt pros and cons for hver destination.</p>
@@ -355,6 +379,76 @@
      </div>
     </footer>
 
+    <button class="pop-up-knap" onclick="openPopup('showcase1')">Pros <br> & <br> Cons</button>
+
+<!-- Popup container -->
+<div id="popup1" class="popup">
+  <div class="popup-content">
+    <span class="close" onclick="closePopup('showcase1')">&times;</span>
+
+    <div class="destination-pros">
+        <h3 style="color: white; margin-bottom: 20px;" class="proscons-titel-popup">Pros</h3>
+        <figure class="proscons-titel-streg"> </figure>
+        <div class="proscons-text-flex">
+          <div class="proscons-icon-text-flex-popup">
+             <img src="https://i.ibb.co/8zxgm5c/Icon-3.png" alt="">
+             <p class="proscons-text-popup">Kulturel rigdom</p> 
+          </div>
+ 
+          <div class="proscons-icon-text-flex-popup">
+             <img src="https://i.ibb.co/8zxgm5c/Icon-3.png" alt="">
+             <p class="proscons-text-popup">Lækker mad</p> 
+          </div>
+ 
+          <div class="proscons-icon-text-flex-popup">
+             <img src="https://i.ibb.co/8zxgm5c/Icon-3.png" alt="">
+             <p class="proscons-text-popup">Fantastisk natur</p> 
+          </div>
+ 
+          <div class="proscons-icon-text-flex-popup">
+             <img src="https://i.ibb.co/8zxgm5c/Icon-3.png" alt="">
+             <p class="proscons-text-popup">Venlige mennesker</p> 
+          </div>
+ 
+          <div class="proscons-icon-text-flex-popup">
+             <img src="https://i.ibb.co/8zxgm5c/Icon-3.png" alt="">
+             <p class="proscons-text-popup">Rimelige priser</p> 
+          </div>
+        </div>
+
+        <div style="margin-top:20px;" class="destination-cons">
+            <h3 style="color: white; margin-bottom: 20px;" class="proscons-titel">Cons</h3>
+            <figure class="proscons-titel-streg2"> </figure>
+            <div class="proscons-text-flex">
+              <div class="proscons-icon-text-flex-popup">
+                 <img src="https://i.ibb.co/s3NLGYz/Icon-4.png" alt="">
+                 <p class="proscons-text-popup">Overfyldte turiststeder</p> 
+              </div>
+     
+              <div class="proscons-icon-text-flex-popup">
+                 <img src="https://i.ibb.co/s3NLGYz/Icon-4.png" alt="">
+                 <p class="proscons-text-popup">Klima</p> 
+              </div>
+     
+              <div class="proscons-icon-text-flex-popup">
+                 <img src="https://i.ibb.co/s3NLGYz/Icon-4.png" alt="">
+                 <p class="proscons-text-popup">Sprogbarriere</p> 
+              </div>
+     
+              <div class="proscons-icon-text-flex-popup">
+                 <img src="https://i.ibb.co/s3NLGYz/Icon-4.png" alt="">
+                 <p class="proscons-text-popup">Kulturelle forskelle</p> 
+              </div>
+     
+              <div class="proscons-icon-text-flex-popup">
+                 <img src="https://i.ibb.co/s3NLGYz/Icon-4.png" alt="">
+                 <p class="proscons-text-popup">Turistfælder</p> 
+              </div>
+            </div>
+           </div>
+
+  </div>
+</div> 
 
     <script src="script.js"></script>
 </body>

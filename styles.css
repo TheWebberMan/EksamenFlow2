@@ -30,6 +30,7 @@ h1 {
     font-weight: 400;
     font-style: normal;
     line-height: 48px;
+    color: #161718;
 }
 
 h2 {
@@ -37,13 +38,14 @@ h2 {
     font-weight: 400;
     font-style: normal;
     line-height: 48px;
+    color: #161718;
 }
 
 h3 {
     font-weight: 400;
     font-size:32px;
     font-style: normal;
-    color: #2D2F30;
+    color: #161718;
     line-height: 40px;
 }
 
@@ -51,7 +53,7 @@ h4 {
     font-weight: 300;
     font-size:28px;
     font-style: normal;
-    color: #2D2F30;
+    color: #161718;
 }
 
 p {
@@ -59,6 +61,7 @@ p {
     font-weight: 400;
     font-style: normal;
     line-height: 24px;
+    color: #5A5E60;
 }
 
 .white-text {
@@ -72,6 +75,7 @@ p {
         font-weight: 400;
         font-style: normal;
         line-height: 82px;
+        color: #161718;
     }
 
     h2 {
@@ -79,6 +83,7 @@ p {
         font-weight: 400;
         font-style: normal;
         line-height: 82px;
+        color: #161718;
     }
 
     h3 {
@@ -86,6 +91,7 @@ p {
         font-weight: 400;
         font-style: normal;
         line-height: 44px;
+        color: #161718;
     }
 
     h4 {
@@ -93,7 +99,7 @@ p {
         font-size:28px;
         line-height: 36px;
         font-style: normal;
-        color: #2D2F30;
+        color: #161718;
     }
 }
 
@@ -329,14 +335,14 @@ a {
 
 .video-text-box {
     width:90%;
-    height: 202px;
+    height: 320px;
     padding: 16px;
     border-radius: 24px;
     border: 1px solid rgba(165, 185, 196, 0.30);
     background-image: linear-gradient(to right, #7897A6B2, #123140B2);
     position: absolute;
     inset: 0;
-    margin: 300px auto 0 auto;
+    margin: 150px auto 0 auto;
     color: white;
     backdrop-filter: blur(2px); 
     
@@ -356,6 +362,7 @@ a {
     border-radius: 40px;
     position: relative;
     box-shadow: 0px 10px 5px -3px rgba(16, 24, 40, 0.10);
+    color: #FFFFFF;
 }
 
 .text-box1-flex {
@@ -597,6 +604,7 @@ a {
     font-weight: 400;
     font-size: 12px;
     font-style: normal;
+    color: #FFFFFF;
 }
 /* video forside MOBIL sektion slut */
 
@@ -662,6 +670,7 @@ a {
 
 .video-text-box {
     margin: 390px auto 0 auto;
+    height: 202px;
 }
 
 .text-box1 {
@@ -839,6 +848,21 @@ grid-area: text-box1;
     flex-direction: column;
     gap: 8px;
     grid-area: header-text-destinationer;
+}
+
+.video-text-box-spanien {
+    width:90%;
+    height: 202px;
+    padding: 16px;
+    border-radius: 24px;
+    border: 1px solid rgba(165, 185, 196, 0.30);
+    background-image: linear-gradient(to right, #7897A6B2, #123140B2);
+    position: absolute;
+    inset: 0;
+    margin: 300px auto 0 auto;
+    color: white;
+    backdrop-filter: blur(2px); 
+    
 }
 /* Destinationer header MOBIL slut */
 
@@ -1439,6 +1463,21 @@ button:hover {
     gap: 8px;
 }
 
+.video-text-box-spanien {
+    width:90%;
+    height: 202px;
+    padding: 16px;
+    border-radius: 24px;
+    border: 1px solid rgba(165, 185, 196, 0.30);
+    background-image: linear-gradient(to right, #7897A6B2, #123140B2);
+    position: absolute;
+    inset: 0;
+    margin: 390px auto 0 auto;
+    color: white;
+    backdrop-filter: blur(2px); 
+    
+}
+
 
 
 
@@ -1983,7 +2022,7 @@ button:hover {
     top: 84px;
     right: 20px;
     z-index: 99;
-    width: 40vw;
+    width: 30vw;
     overflow: hidden;
 }
 
@@ -1995,7 +2034,7 @@ button:hover {
     top: 76px;
     background: white; /* Changed from red to white */
     box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.15);
-    border-radius: 12px;
+    border-radius: 40px;
     opacity: 0;
     transition: all 0.3s ease; /* Smoother transition */
     padding: 20px; /* Added padding */
@@ -2004,18 +2043,36 @@ button:hover {
 .continent, .displayCountries p {
     cursor: pointer; /* Makes it clear they are clickable */
     margin: 10px 20px; /* Added margin for spacing */
+    display: flex;
+    flex-direction: column;
+    padding: 5px 10px 5px 10px;
 }
 
 .continent.active {
-    color: blue; /* Change this to the color you prefer for active state */
+    background-color: #1E516B;
+    color: white;
+    border-radius: 40px;
+    width: fit-content;
+    padding: 5px 10px 5px 10px;
 }
 
 /* Styling for the Continent and Countries titles */
 .section-title {
     font-size: 16px;
     font-weight: bold;
-    border-bottom: 2px solid black;
-    margin-bottom: 10px;
+    border-bottom: 2px solid rgb(30, 81, 107, 0.2);
+    margin: 0 0 10px 20px;
+    color:#1E516B;
+    max-width: 120px;
+}
+
+.section-title2 {
+    font-size: 16px;
+    font-weight: bold;
+    border-bottom: 2px solid rgb(30, 81, 107, 0.2);
+    margin: 0 0 10px 18px;
+    color:#1E516B;
+    max-width: 120px;
 }
 
 /* Layout for titles and content */
@@ -2031,4 +2088,81 @@ button:hover {
 
 .continent-menu {
     display: none; /* Skjuler kontinenterne som standard */
+}
+
+
+#country-links {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+#country-links a {
+    color: black;
+    padding: 10px;
+    text-decoration: none;
+    display: block;
+}
+
+#country-links a:hover {
+    background-color: #1E516B;
+    color: white;
+    border-radius: 40px;
+    width: fit-content;
+    padding-left: 10px;
+    padding-right: 10px;
+
+}
+
+.nav-list .hoverMegamenu:hover .subnav {
+    display: flex;
+}
+
+
+
+
+
+
+
+
+
+
+/* Style for dropdown menu under Ressourcer */
+.hoverResourceDropdown {
+    position: relative;
+}
+
+.hoverResourceDropdown .resource-dropdown {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    padding: 10px;
+    flex-direction: column;
+}
+
+.hoverResourceDropdown .resource-dropdown a {
+    color: black;
+    padding: 8px 12px;
+    text-decoration: none;
+    display: block;
+    max-width:300px;
+}
+
+.resource-dropdown {
+    transform: translateX(-80px);
+    border-radius: 40px;
+}
+
+.hoverResourceDropdown .resource-dropdown a:hover {
+    background-color: #1E516B;
+    color: white;
+    border-radius: 40px;
+}
+
+/* Show the dropdown when hovering over the dropdown li */
+.hoverResourceDropdown:hover .resource-dropdown {
+    display: flex;
 }

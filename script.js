@@ -1,3 +1,5 @@
+// Destinationer megamenu start
+
 document.querySelectorAll('.continent').forEach(item => {
     item.addEventListener('click', function() {
         document.querySelectorAll('.continent').forEach(c => c.classList.remove('active'));
@@ -10,17 +12,58 @@ document.querySelectorAll('.continent').forEach(item => {
 
 function getCountriesByContinent(continent) {
     const data = {
-        'Asia': ['China', 'India', 'Japan', 'South Korea', 'Thailand'],
-        'Europe': ['Germany', 'France', 'Italy', 'Spain', 'United Kingdom'],
-        'Africa': ['Nigeria', 'Egypt', 'South Africa', 'Morocco', 'Kenya']
+        'Asia': [
+            { name: 'Japan', url: '/destinationer-japan.html' },
+            { name: 'Thailand', url: '/destinationer-thailand.html' }
+        ],
+        'Europe': [
+            { name: 'Spanien', url: '/destinationer-spanien.html' },
+            { name: 'Grækenland', url: '/destinationer-graekenland.html' }
+        ],
+        'Southamerica': [
+            { name: 'Brasilien', url: '/destinationer-brasilien.html' },
+            { name: 'Chile', url: '/destinationer-chile.html' }
+        ]
     };
-    return data[continent];
+    return data[continent] || [];
 }
+
+function generateCountryLinks(continent) {
+    const countries = getCountriesByContinent(continent);
+    const container = document.getElementById('country-links');
+    container.innerHTML = ''; // Clear previous links
+
+    countries.forEach(country => {
+        const link = document.createElement('a');
+        link.href = country.url;
+        link.textContent = country.name;
+        link.className = 'country-link';
+        container.appendChild(link);
+    });
+}
+
+document.querySelectorAll('.continent').forEach(item => {
+    item.addEventListener('click', event => {
+        const continent = event.target.getAttribute('data-continent');
+        generateCountryLinks(continent);
+    });
+});
+
 
 function displayCountries(countries) {
     const displayDiv = document.querySelector('.displayCountries');
     displayDiv.innerHTML = countries.map(country => `<p>${country}</p>`).join('');
 }
+
+// Destinationer megamenu slut
+
+
+// Ressourcer megamenu start
+
+
+
+// Ressourcer megamenu slut
+
 
 
 // Funktion til at vise destinationer, Den er display: none; som default i css.
