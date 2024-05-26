@@ -255,3 +255,14 @@ showQuestion();
     var popup = document.getElementById("popup" + showcaseId.slice(-1));
     popup.style.display = "none";
   }
+
+
+  // ny mobil nav test
+
+  let menuToggle = document.querySelector('.menuToggle')
+  let header = document.querySelector('header')
+  menuToggle.onclick = function(){
+      header.classList.toggle('active')
+  }
+
+  

@@ -14,31 +14,70 @@
 </head>
 <body class="header-destination-sektion">
  <header class="header-styling">
-        <section class="p-menu1">
-            <nav id="navbar" class="navigation" role="navigation">
-              <input id="toggle1" type="checkbox" />
-              <label class="hamburger1" for="toggle1">
-                <div class="top"></div>
-                <div class="meat"></div>
-                <div class="bottom"></div>
-              </label>
-            
-              <nav class="menu1">
-                <a class="link1" href="">Our Models</a>
-                <a class="link1" href="">Specialties</a>
-                <a class="link1" href="">About</a>
-                <a class="link1" href="">Blog</a>
-                <a class="link1 kbutton-nav" href="">Contact</a>
-              </nav>
-          </nav>
-          </section>
+    <section class="p-menu1">
+        <nav id="navbar" class="navigation" role="navigation">
+          <input id="toggle1" type="checkbox" />
+          <label class="hamburger1" for="toggle1">
+            <div class="top"></div>
+            <div class="meat"></div>
+            <div class="bottom"></div>
+          </label>
+        
+          <div class="menu1">
+            <a class="link1" style="margin-bottom: 30px;" href="#">Forside</a>
+            <div class="dropdown">
+                <a style="margin-bottom: 20px; transform: translateY(100px);" class="link1 dropdown-toggle" href="#">Destinationer</a>
+                <div class="continent-menu">
+                    <p class="continent" style="color: white; font-size: 20px; margin: 20px auto 20px auto;">Asien🠿</p>
+                    <div class="countries" style="display: none;">
+                        <ul style="margin-bottom: 20px;">
+                            <a href="/destinationer-thailand.html"><li class="burger-menu-dropdown-text">Thailand</li></a>
+                            <a href="/destinationer-japan.html"><li class="burger-menu-dropdown-text">Japan</li></a>
+                        </ul>
+                    </div>
+                </div>
+                <div class="continent-menu">
+                    <p class="continent" style="color: white; font-size: 20px; margin-bottom: 20px;">Europa🠿</p>
+                    <div class="countries" style="display: none;">
+                        <ul>
+                            <a href="/destinationer-spanien.html"><li class="burger-menu-dropdown-text">Spanien</li></a>
+                            <a href="/destinationer-graekenland.html"><li style="margin-bottom: 20px 0;" class="burger-menu-dropdown-text">Grækenland</li></a>
+                        </ul>
+                    </div>
+                </div>
+                <div class="continent-menu">
+                    <p class="continent" style="color: white; font-size: 20px; margin: 10px auto 20px auto;">Sydamerika🠿</p>
+                    <div class="countries" style="display: none;">
+                        <ul>
+                            <a href="/destinationer-chile.html"><li class="burger-menu-dropdown-text">Chile</li></a>
+                            <a href="/destinationer-brasilien.html"><li class="burger-menu-dropdown-text">Brasilien</li></a>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <a class="link1" href="/rejsetips.html">Rejsetips</a>
+            <ul class="menu">
+                <li class="menu-item">
+                    <a class="link1" href="#">🠿 Nyttige links 🠿</a>
+                    <div>
+                        <a class="n-link" href="https://um.dk/">Udenringsministeriet</a>
+                        <a class="n-link" href="https://www.rejseforsikringsguiden.dk/">rejseforsikringsguiden</a>
+                        <a class="n-link" href="https://www.valutakurser.dk/">valutakurser</a>
+                        <a class="n-link" href="https://www.momondo.dk/">momondo</a>
+                        <a class="n-link" href="https://www.trivago.com/">trivago</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+      </nav>
+      </section>
           
           <nav class="nav-styling">
             <div class="nav-img">
                 <img src="https://i.ibb.co/wNbtkJt/Logo.png" alt="">
             </div>
             <ul class="nav-list">
-                <li><a style="color:black;" href="">Hjem</a></li>
+                <li><a class="hoverstreg" style="color:black;" href="/index.html">Hjem</a></li>
                 <li class="hoverMegamenu">
                     <a style="color:black;" href="#">Destination</a>
                     <ul class="subnav">
@@ -54,7 +93,7 @@
                         </div>
                     </ul>
                 </li>
-                <li><a style="color:black;" href="">Rejsetips</a></li>
+                <li><a class="hoverstreg" style="color:black;" href="/rejsetips.html">Rejsetips</a></li>
                 
                 <li class="hoverResourceDropdown">
                     <a style="color:black;" href="">Nyttige links</a>
@@ -71,6 +110,14 @@
 
      <section class="destinationer-header-grid">
      <div class="video-box">
+        <iframe width="100%" height="100%" style="border-radius: 40px;"
+        src="https://www.youtube.com/embed/cSsr81zsbMs?si=h0YIRjBGNYX_3zMn&autoplay=1&loop=1&playlist=cSsr81zsbMs&vq=hd1080" 
+        title="YouTube video player" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        referrerpolicy="strict-origin-when-cross-origin" 
+        allowfullscreen>
+    </iframe>
         <div class="video-text-box">
             <h3 style="color: white;">
                 Grækenland
@@ -84,7 +131,7 @@
     <div class="header-text-destinationer">
      <h3>Brug for generelle rejsetips?</h3>
      <p>Lær 10 tips til førstegangsrejsende, fra hvordan man planlægger, hvad man skal pakke, sikkerhedstips og meget mere.</p>
-     <a class="laes-mere-knap" href="">
+     <a class="laes-mere-knap" href="/rejsetips.html#tips">
         <p class="knap-text">Læs mere</p>
      </a>
     </div>
@@ -351,38 +398,38 @@
     </main>
 
     <footer class=" footer-container">
-     <div class=" footer-flex"> 
-        <div class="footer-list-styling text-max-w last-element">
-            <img src="https://i.ibb.co/Rh8DDmm/placeholder.jpgs" style="height: 100px; width: 100px;" alt="">
-            <p>Rejseklar? find inspiration og lær om din destination, pakkemetoder, forberedelse og nyttige rejsetips.</p>
-            <p>@2024 Rejseklar</p>
+        <div class=" footer-flex"> 
+           <div class="footer-list-styling text-max-w last-element">
+               <img src="https://i.ibb.co/tw65Rks/Logo-1.png" style="height: 70px; width: 70px;" alt="">
+               <p class="white-text">Rejseklar? find inspiration og lær om din destination, pakkemetoder, forberedelse og nyttige rejsetips.</p>
+               <p class="white-text">@2024 Rejseklar</p>
+           </div>
+           <div class="">
+               <ul class="footer-list-styling">
+                   <li class="strong-font-footer">Populære lande</li>
+                   <a href="/destinationer-brasilien.html"><li>Brasilien</li></a>
+                   <a href="/destinationer-chile.html"><li>Chile</li></a>
+                   <a href="/destinationer-japan.html"><li>Japan</li></a>
+                   <a href="/destinationer-spanien.html"><li>Spanien</li></a>
+               </ul>
+           </div>
+           <div class="">
+               <ul class="footer-list-styling">
+                <a href=""><li class="strong-font-footer">Gode rejsetips</li></a>
+                <a href="/rejsetips.html#pakkesektion"><li>Pak din kuffert</li></a>
+                <a href="/rejsetips.html#checkliste"><li>Tjekliste</li></a>
+                <a href="/rejsetips.html#tips"><li>10 nyttige tips</li></a>
+               </ul>
+           </div>
+           <div class="">
+               <ul class="footer-list-styling text-max-w">
+                   <li class="strong-font-footer">Prøv vores quiz</li>
+                   <li>Quizzen evaluerer din parathed til din kommende rejse.</li>
+                   <a href="/rejsetips.html#quizsek">Prøv nu ></a>
+               </ul>
+           </div>
         </div>
-        <div class="">
-            <ul class="footer-list-styling">
-                <li class="strong-font-footer">Populære lande</li>
-                <li>Colombia</li>
-                <li>Chile</li>
-                <li>Japan</li>
-                <li>Spanien</li>
-            </ul>
-        </div>
-        <div class="">
-            <ul class="footer-list-styling">
-                <li class="strong-font-footer">Gode rejsetips</li>
-                <li>Pak din kuffert</li>
-                <li>Tjekliste</li>
-                <li>10 nyttige tips</li>
-            </ul>
-        </div>
-        <div class="">
-            <ul class="footer-list-styling text-max-w">
-                <li class="strong-font-footer">Prøv vores quiz</li>
-                <li>Quizzen evaluerer din parathed til din kommende rejse.</li>
-                <a href="www.youtube.com">Prøv nu ></a>
-            </ul>
-        </div>
-     </div>
-    </footer>
+       </footer>
 
     <button class="pop-up-knap" onclick="openPopup('showcase1')">Pros <br> & <br> Cons</button>
 

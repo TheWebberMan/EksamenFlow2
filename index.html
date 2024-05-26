@@ -15,30 +15,70 @@
 <body class="header-forside-sektion">
  <header class="header-styling">
   
-        <section class="p-menu1">
-            <nav id="navbar" class="navigation" role="navigation">
-              <input id="toggle1" type="checkbox" />
-              <label class="hamburger1" for="toggle1">
-                <div class="top"></div>
-                <div class="meat"></div>
-                <div class="bottom"></div>
-              </label>
-            
-              <nav class="menu1">
-                <a class="link1" href="">Forside</a>
-                <a class="link1" href="">Destinationer</a>
-                <a class="link1" href="">Rejsetips</a>
-                <a class="link1" href="">Nyttige links</a>
-              </nav>
-          </nav>
-          </section>
+    <section class="p-menu1">
+        <nav id="navbar" class="navigation" role="navigation">
+          <input id="toggle1" type="checkbox" />
+          <label class="hamburger1" for="toggle1">
+            <div class="top"></div>
+            <div class="meat"></div>
+            <div class="bottom"></div>
+          </label>
+        
+          <div class="menu1">
+            <a class="link1" style="margin-bottom: 30px;" href="#">Forside</a>
+            <div class="dropdown">
+                <a style="margin-bottom: 20px; transform: translateY(100px);" class="link1 dropdown-toggle" href="#">Destinationer</a>
+                <div class="continent-menu">
+                    <p class="continent" style="color: white; font-size: 20px; margin: 20px auto 20px auto;">Asien🠿</p>
+                    <div class="countries" style="display: none;">
+                        <ul style="margin-bottom: 20px;">
+                            <a href="/destinationer-thailand.html"><li class="burger-menu-dropdown-text">Thailand</li></a>
+                            <a href="/destinationer-japan.html"><li class="burger-menu-dropdown-text">Japan</li></a>
+                        </ul>
+                    </div>
+                </div>
+                <div class="continent-menu">
+                    <p class="continent" style="color: white; font-size: 20px; margin-bottom: 20px;">Europa🠿</p>
+                    <div class="countries" style="display: none;">
+                        <ul>
+                            <a href="/destinationer-spanien.html"><li class="burger-menu-dropdown-text">Spanien</li></a>
+                            <a href="/destinationer-graekenland.html"><li style="margin-bottom: 20px 0;" class="burger-menu-dropdown-text">Grækenland</li></a>
+                        </ul>
+                    </div>
+                </div>
+                <div class="continent-menu">
+                    <p class="continent" style="color: white; font-size: 20px; margin: 10px auto 20px auto;">Sydamerika🠿</p>
+                    <div class="countries" style="display: none;">
+                        <ul>
+                            <a href="/destinationer-chile.html"><li class="burger-menu-dropdown-text">Chile</li></a>
+                            <a href="/destinationer-brasilien.html"><li class="burger-menu-dropdown-text">Brasilien</li></a>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <a class="link1" href="/rejsetips.html">Rejsetips</a>
+            <ul class="menu">
+                <li class="menu-item">
+                    <a class="link1" href="#">🠿 Nyttige links 🠿</a>
+                    <div>
+                        <a class="n-link" href="https://um.dk/">Udenringsministeriet</a>
+                        <a class="n-link" href="https://www.rejseforsikringsguiden.dk/">rejseforsikringsguiden</a>
+                        <a class="n-link" href="https://www.valutakurser.dk/">valutakurser</a>
+                        <a class="n-link" href="https://www.momondo.dk/">momondo</a>
+                        <a class="n-link" href="https://www.trivago.com/">trivago</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+      </nav>
+      </section>
           
           <nav class="nav-styling">
             <div class="nav-img">
                 <img src="https://i.ibb.co/wNbtkJt/Logo.png" alt="">
             </div>
             <ul class="nav-list">
-                <li><a style="color:black;" href="">Hjem</a></li>
+                <li><a class="hoverstreg" style="color:black; text-decoration: underline 2px #1E516B; text-underline-offset: 2px;" href="/index.html">Hjem</a></li>
                 <li class="hoverMegamenu">
                     <a style="color:black;" href="#">Destination</a>
                     <ul class="subnav">
@@ -54,7 +94,7 @@
                         </div>
                     </ul>
                 </li>
-                <li><a style="color:black;" href="">Rejsetips</a></li>
+                <li><a class="hoverstreg" style="color:black;" href="/rejsetips.html">Rejsetips</a></li>
                 
                 <li class="hoverResourceDropdown">
                     <a style="color:black;" href="">Nyttige links</a>
@@ -214,12 +254,17 @@
     </section>
 
     <section class="forside-video-sektion">
-        <video class="forside-video-styling" src=""></video>
+        <div class="forside-video-styling" src=""><iframe width="100%" height="100%" style="border-radius:40px;" 
+            src="https://www.youtube.com/embed/0WCOeSP0Mjk?autoplay=1&loop=1&playlist=0WCOeSP0Mjk&vq=hd1080" 
+            title="YouTube video player" frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+        </iframe></div>
     <div class="forside-video-text">
         <h3 style="margin-bottom: 5px;">Hvordan pakker jeg bedst?</h3>
         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
         </p>
-        <a class="laes-mere-knap" href="">
+        <a class="laes-mere-knap" href="/rejsetips.html#pakkesektion">
             <p class="knap-text white-text">Læs mere</p>
         </a>
     </div>
@@ -237,25 +282,25 @@
            <div class="">
                <ul class="footer-list-styling">
                    <li class="strong-font-footer">Populære lande</li>
-                   <a href=""><li>Brasilien</li></a>
-                   <a href=""><li>Chile</li></a>
-                   <a href=""><li>Japan</li></a>
-                   <a href=""><li>Spanien</li></a>
+                   <a href="/destinationer-brasilien.html"><li>Brasilien</li></a>
+                   <a href="/destinationer-chile.html"><li>Chile</li></a>
+                   <a href="/destinationer-japan.html"><li>Japan</li></a>
+                   <a href="/destinationer-spanien.html"><li>Spanien</li></a>
                </ul>
            </div>
            <div class="">
                <ul class="footer-list-styling">
                 <a href=""><li class="strong-font-footer">Gode rejsetips</li></a>
-                <a href=""><li>Pak din kuffert</li></a>
-                <a href=""><li>Tjekliste</li></a>
-                <a href=""><li>10 nyttige tips</li></a>
+                <a href="/rejsetips.html#pakkesektion"><li>Pak din kuffert</li></a>
+                <a href="/rejsetips.html#checkliste"><li>Tjekliste</li></a>
+                <a href="/rejsetips.html#tips"><li>10 nyttige tips</li></a>
                </ul>
            </div>
            <div class="">
                <ul class="footer-list-styling text-max-w">
                    <li class="strong-font-footer">Prøv vores quiz</li>
                    <li>Quizzen evaluerer din parathed til din kommende rejse.</li>
-                   <a href="www.youtube.com">Prøv nu ></a>
+                   <a href="/rejsetips.html#quizsek">Prøv nu ></a>
                </ul>
            </div>
         </div>

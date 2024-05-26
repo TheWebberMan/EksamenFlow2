@@ -13,7 +13,9 @@ body {
     
 }
 
-
+html {
+    scroll-behavior: smooth;
+}
 
 a {
     text-decoration: none;
@@ -113,7 +115,9 @@ p {
 
   /* dropwdown test */
 
-  
+  .n-link {
+    margin-right: 9px;
+  }
   /* dropdown test */
 
 
@@ -444,7 +448,8 @@ p {
 }
 
 .forside-video-styling {
-    height: 284px;
+    max-height: 361px;
+    min-width: 50%;
     border-radius: 40px;
     background-color: #1E516B;
 }
@@ -476,6 +481,12 @@ p {
 /* Header DESKTOP start */
 
 /* nav DESKTOP start */
+.hoverstreg:hover {
+
+    text-decoration: underline 2px #1E516B
+
+}
+
 #navbar.navigation {
     display: none;
 }
@@ -1985,6 +1996,10 @@ button:hover {
         margin-top: 7px;
         -webkit-transition: all 0.2s ease-in-out;
         transition: all 0.2s ease-in-out;
+      }
+
+      .navigation {
+        position: relative;
       }
       
       #toggle1 {
