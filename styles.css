@@ -173,7 +173,7 @@ a {
   }
   
   #toggle1:checked ~ .menu1 {
-    height: 70dvh;
+    height: 68dvh;
     /* position: fixed;
     top: 40px; */
   }
@@ -211,6 +211,7 @@ a {
   
   .link1 {
     width: 100%;
+    height: 50px;
     margin: 0;
     padding: 10px 0;
     font: 700 20px 'Oswald', sans-serif;
@@ -221,70 +222,7 @@ a {
 
   /* dropwdown test */
 
-  .dropdown {
-    position: relative;
-    display: inline-block;
-  }
   
-  .dropdown-toggle {
-    cursor: pointer;
-  }
-  
-  .dropdown-menu {
-    display: none;
-    position: absolute;
-    background-color: #1E516B;
-    min-width: 160px;
-    z-index: 1;
-    text-align: left;
-  }
-  
-  .dropdown-menu a {
-    color: white;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-  }
-  
-  .dropdown-menu a:hover {
-    background-color: #575757;
-  }
-  
-  /* Nested dropdown menu styles */
-  .nested-dropdown {
-    position: relative;
-  }
-  
-  .nested-menu {
-    display: none;
-    position: absolute;
-    left: 100%;
-    top: 0;
-    background-color: #1E516B;
-    min-width: 160px;
-    z-index: 1;
-  }
-  
-  .nested-dropdown:hover .nested-menu {
-    display: block;
-  }
-  
-  /* Show the dropdown menu on hover for desktop */
-  .dropdown:hover .dropdown-menu {
-    display: block;
-  }
-  
-  /* Responsive styles for mobile */
-  @media (max-width: 767px) {
-    .dropdown-menu, .nested-menu {
-      position: relative;
-    }
-    
-    .dropdown-menu.show, .nested-menu.show {
-      display: block;
-    }
-  }
-
   /* dropdown test */
 
 }
@@ -335,14 +273,14 @@ a {
 
 .video-text-box {
     width:90%;
-    height: 320px;
+    height: 300px;
     padding: 16px;
     border-radius: 24px;
     border: 1px solid rgba(165, 185, 196, 0.30);
     background-image: linear-gradient(to right, #7897A6B2, #123140B2);
     position: absolute;
     inset: 0;
-    margin: 150px auto 0 auto;
+    margin: 200px auto 0 auto;
     color: white;
     backdrop-filter: blur(2px); 
     
@@ -669,8 +607,8 @@ a {
 }
 
 .video-text-box {
-    margin: 390px auto 0 auto;
-    height: 202px;
+    margin: 415px auto 0 auto;
+    height: 180px;
 }
 
 .text-box1 {
@@ -850,20 +788,6 @@ grid-area: text-box1;
     grid-area: header-text-destinationer;
 }
 
-.video-text-box-spanien {
-    width:90%;
-    height: 202px;
-    padding: 16px;
-    border-radius: 24px;
-    border: 1px solid rgba(165, 185, 196, 0.30);
-    background-image: linear-gradient(to right, #7897A6B2, #123140B2);
-    position: absolute;
-    inset: 0;
-    margin: 300px auto 0 auto;
-    color: white;
-    backdrop-filter: blur(2px); 
-    
-}
 /* Destinationer header MOBIL slut */
 
 /* Destinationer content grid start */
@@ -1463,20 +1387,6 @@ button:hover {
     gap: 8px;
 }
 
-.video-text-box-spanien {
-    width:90%;
-    height: 202px;
-    padding: 16px;
-    border-radius: 24px;
-    border: 1px solid rgba(165, 185, 196, 0.30);
-    background-image: linear-gradient(to right, #7897A6B2, #123140B2);
-    position: absolute;
-    inset: 0;
-    margin: 390px auto 0 auto;
-    color: white;
-    backdrop-filter: blur(2px); 
-    
-}
 
 
 
@@ -2082,14 +1992,26 @@ button:hover {
 
 
 
+
+
+
 .active-continent {
-    background-color: #ddd; /* Lys grå for at fremhæve det åbne kontinent */
+    background-color: #5D8E99; /* Lys grå for at fremhæve det åbne kontinent */
+    width: fit-content;
+    margin: 20px auto 40px auto;
+    padding: 4px 9px;
+    border-radius: 20px;
 }
 
 .continent-menu {
     display: none; /* Skjuler kontinenterne som standard */
 }
 
+.burger-menu-dropdown-text {
+    color: #FFFFFF; 
+    font-size: 16px;
+    margin-bottom: 3px;
+}
 
 #country-links {
     display: flex;
@@ -2111,7 +2033,6 @@ button:hover {
     width: fit-content;
     padding-left: 10px;
     padding-right: 10px;
-
 }
 
 .nav-list .hoverMegamenu:hover .subnav {
