@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Project Title</title>
+    <title>Opdag Chile: Natur, Kultur, Transport & Madoplevelser</title>
+    <meta name="description" content="Bliv inspireret til din rejse til Chile med RejseKlar! Udforsk natur, kultur, transport, madoplevelser og de bedste rater og rabatter i Chile. Få tips til dit chilenske eventyr.">
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,67 +15,70 @@
 </head>
 <body class="header-destination-sektion">
  <header class="header-styling">
-    <section class="p-menu1">
-        <nav id="navbar" class="navigation" role="navigation">
-          <input id="toggle1" type="checkbox" />
-          <label class="hamburger1" for="toggle1">
-            <div class="top"></div>
-            <div class="meat"></div>
-            <div class="bottom"></div>
-          </label>
-        
-          <div class="menu1">
-            <a class="link1" style="margin-bottom: 30px;" href="#">Forside</a>
-            <div class="dropdown">
-                <a style="margin-bottom: 20px; transform: translateY(100px);" class="link1 dropdown-toggle" href="#">Destinationer</a>
-                <div class="continent-menu">
-                    <p class="continent" style="color: white; font-size: 20px; margin: 20px auto 20px auto;">Asien🠿</p>
-                    <div class="countries" style="display: none;">
-                        <ul style="margin-bottom: 20px;">
-                            <a href="/destinationer-thailand.html"><li class="burger-menu-dropdown-text">Thailand</li></a>
-                            <a href="/destinationer-japan.html"><li class="burger-menu-dropdown-text">Japan</li></a>
-                        </ul>
-                    </div>
-                </div>
-                <div class="continent-menu">
-                    <p class="continent" style="color: white; font-size: 20px; margin-bottom: 20px;">Europa🠿</p>
-                    <div class="countries" style="display: none;">
-                        <ul>
-                            <a href="/destinationer-spanien.html"><li class="burger-menu-dropdown-text">Spanien</li></a>
-                            <a href="/destinationer-graekenland.html"><li style="margin-bottom: 20px 0;" class="burger-menu-dropdown-text">Grækenland</li></a>
-                        </ul>
-                    </div>
-                </div>
-                <div class="continent-menu">
-                    <p class="continent" style="color: white; font-size: 20px; margin: 10px auto 20px auto;">Sydamerika🠿</p>
-                    <div class="countries" style="display: none;">
-                        <ul>
-                            <a href="/destinationer-chile.html"><li class="burger-menu-dropdown-text">Chile</li></a>
-                            <a href="/destinationer-brasilien.html"><li class="burger-menu-dropdown-text">Brasilien</li></a>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <a class="link1" href="/rejsetips.html">Rejsetips</a>
-            <ul class="menu">
-                <li class="menu-item">
-                    <a class="link1" href="#">🠿 Nyttige links 🠿</a>
-                    <div>
-                        <a class="n-link" href="https://um.dk/">Udenringsministeriet</a>
-                        <a class="n-link" href="https://www.rejseforsikringsguiden.dk/">rejseforsikringsguiden</a>
-                        <a class="n-link" href="https://www.valutakurser.dk/">valutakurser</a>
-                        <a class="n-link" href="https://www.momondo.dk/">momondo</a>
-                        <a class="n-link" href="https://www.trivago.com/">trivago</a>
-                    </div>
-                </li>
+    <nav class="hamburger-nav">
+        <a href="/index.html"><img class="hamburger-logo toggle" style="padding: 0;" for="drop" src="https://i.ibb.co/Cwh1CC4/logo-white.png" alt=""></a>
+        <img class="hamburger-bars toggle" style="padding: 0;" for="drop" src="https://i.ibb.co/jH8c6Jh/logo-white-1.png" alt="">
+        <label style="min-height: 70px;" for="drop" class="toggle"></label>
+        <input type="checkbox" id="drop" />
+        <ul class="menu">
+          <li><a href="/index.html">Hjem</a></li>
+          <li> 
+            <!-- First Tier Drop Down -->
+            
+            
+            <!-- First Tier Drop Down -->
+            <label for="drop-2" class="toggle">Destinationer +</label>
+            <input type="checkbox" id="drop-2"/>
+            <ul>
+              
+              <li> 
+                
+                <!-- Second Tier Drop Down -->
+                <label for="drop-3" class="toggle">Asien +</label>
+                <input type="checkbox" id="drop-3"/>
+                    <ul>
+                    <li><a href="/destinationer-thailand.html">Thailand</a></li>
+                    <li><a href="/destinationer-japan.html">Japan</a></li>
+                    </ul>
+
+                    <label for="drop-4" class="toggle1">Europa +</label>
+                    <input type="checkbox" id="drop-4"/>
+                    <ul>
+                    <li><a href="/destinationer-spanien.html">Spanien</a></li>
+                    <li><a href="/destinationer-graekenland.html">Grækenland</a></li>
+                    </ul>
+
+                    <label for="drop-5" class="toggle2">Sydamerika +</label>
+                    <input type="checkbox" id="drop-5"/>
+                    <ul>
+                    <li><a href="/destinationer-brasilien.html">Brasilien</a></li>
+                    <li><a href="/destinationer-chile.html">Chile</a></li>
+                    </ul>   
+              </li>
             </ul>
-        </div>
+          </li>
+
+          <li><a href="/rejsetips.html">Rejsetips</a></li>
+
+          <label for="drop-1" class="toggle">Nyttige links +</label>
+            <input type="checkbox" id="drop-1"/>
+            <ul>
+              <li><a href="https://um.dk/" target="_blank">Udenringsministeriet</a></li>
+              <li><a href="https://www.rejseforsikringsguiden.dk/" target="_blank">rejseforsikringsguiden</a></li>
+              <li><a href="https://www.valutakurser.dk/" target="_blank">valutakurser</a></li>
+              <li><a href="https://www.momondo.dk/" target="_blank">momondo</a></li>
+              <li><a href="https://www.trivago.com/" target="_blank">trivago</a></li>
+            </ul>
+          </li>
+          <li> 
+
+          
+        </ul>
       </nav>
-      </section>
           
           <nav class="nav-styling">
             <div class="nav-img">
-                <img src="https://i.ibb.co/wNbtkJt/Logo.png" alt="">
+                <a href="/index.html"> <img src="https://i.ibb.co/wNbtkJt/Logo.png" alt=""> </a>
             </div>
             <ul class="nav-list">
                 <li><a class="hoverstreg" style="color:black;" href="/index.html">Hjem</a></li>
@@ -118,11 +122,11 @@
     referrerpolicy="strict-origin-when-cross-origin" 
     allowfullscreen>
 </iframe>
-        <div class="video-text-box">
+        <div class="video-text-box video-text-title">
             <h3 style="color: white;">
                 Chile
             </h3>
-            <p class="white-text">
+            <p class="white-text video-text">
                 Chile er et land af varierede kontraster, der spænder fra dramatiske bjergkæder til smukke kyststrækninger og livlige byer. Med en rig kultur, en spændende gastronomisk scene og en blomstrende kunst- og designverden tilbyder Chile en dynamisk og unik rejseoplevelse.
             </p>
         </div>
@@ -292,91 +296,69 @@
                      <div class="card swiper-slide">
                          <div class="image-content">
                              <span class="overlay"></span>
- 
+                            <a href="/destinationer-spanien.html">
                              <div class="card-image">
                                 <img src="https://i.ibb.co/0ymMWM5/Card-slider.png" alt="" class="card-img">
                              </div>
+                            </a> 
                          </div>
  
                      </div>
                      <div class="card swiper-slide">
                          <div class="image-content">
                              <span class="overlay"></span>
- 
+                            <a href="/destinationer-brasilien.html">
                              <div class="card-image">
-                                    <img src="https://i.ibb.co/YB0KV4D/Card-slider-2.png" alt="" class="card-img">
+                                    <img src="https://i.ibb.co/zJmgGqs/Card-slider-6.png" alt="" class="card-img">
                              </div>
+                            </a> 
                          </div>
  
                      </div>
                      <div class="card swiper-slide">
                          <div class="image-content">
                              <span class="overlay"></span>
- 
+                            <a href="/destinationer-japan.html">
                              <div class="card-image">
                                   <img src="https://i.ibb.co/GPBTKWF/Card-slider-1.png" alt="" class="card-img">
                              </div>
+                            </a> 
                          </div>
  
                      </div>
                      <div class="card swiper-slide">
                          <div class="image-content">
                              <span class="overlay"></span>
- 
+                            <a href="/destinationer-thailand.html">
                              <div class="card-image">
-                                     <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjxivAs4UknzmDfLBXGMxQkayiZDhR2ftB4jcIV7LEnIEStiUyMygioZnbLXCAND-I_xWQpVp0jv-dv9NVNbuKn4sNpXYtLIJk2-IOdWQNpC2Ldapnljifu0pnQqAWU848Ja4lT9ugQex-nwECEh3a96GXwiRXlnGEE6FFF_tKm66IGe3fzmLaVIoNL/s1600/img_avatar.png" alt="" class="card-img">
+                                     <img src="https://i.ibb.co/B6phNpL/Card-slider-5.png" alt="" class="card-img">
                              </div>
+                            </a> 
                          </div>
  
                      </div>
                      <div class="card swiper-slide">
                          <div class="image-content">
                              <span class="overlay"></span>
- 
+                            <a href="/destinationer-chile.html">
                              <div class="card-image">
-                                     <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjxivAs4UknzmDfLBXGMxQkayiZDhR2ftB4jcIV7LEnIEStiUyMygioZnbLXCAND-I_xWQpVp0jv-dv9NVNbuKn4sNpXYtLIJk2-IOdWQNpC2Ldapnljifu0pnQqAWU848Ja4lT9ugQex-nwECEh3a96GXwiRXlnGEE6FFF_tKm66IGe3fzmLaVIoNL/s1600/img_avatar.png" alt="" class="card-img">
+                                     <img src="https://i.ibb.co/gmBShHP/Card-slider-4.png" alt="" class="card-img">
                              </div>
+                            </a>  
                          </div>
  
                      </div>
                      <div class="card swiper-slide">
                          <div class="image-content">
                              <span class="overlay"></span>
- 
+                            <a href="/destinationer-chile.html">
                              <div class="card-image">
-                                     <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjxivAs4UknzmDfLBXGMxQkayiZDhR2ftB4jcIV7LEnIEStiUyMygioZnbLXCAND-I_xWQpVp0jv-dv9NVNbuKn4sNpXYtLIJk2-IOdWQNpC2Ldapnljifu0pnQqAWU848Ja4lT9ugQex-nwECEh3a96GXwiRXlnGEE6FFF_tKm66IGe3fzmLaVIoNL/s1600/img_avatar.png" alt="" class="card-img">
+                                     <img src="https://i.ibb.co/7Vk3mhb/Card-slider-3.png" alt="" class="card-img">
                              </div>
+                            </a> 
                          </div>
  
-                     </div>
-                     <div class="card swiper-slide">
-                         <div class="image-content">
-                             <span class="overlay"></span>
- 
-                             <div class="card-image">
-                                     <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjxivAs4UknzmDfLBXGMxQkayiZDhR2ftB4jcIV7LEnIEStiUyMygioZnbLXCAND-I_xWQpVp0jv-dv9NVNbuKn4sNpXYtLIJk2-IOdWQNpC2Ldapnljifu0pnQqAWU848Ja4lT9ugQex-nwECEh3a96GXwiRXlnGEE6FFF_tKm66IGe3fzmLaVIoNL/s1600/img_avatar.png" alt="" class="card-img">
-                             </div>
-                         </div>
- 
-                     </div>
-                     <div class="card swiper-slide">
-                         <div class="image-content">
-                             <span class="overlay"></span>
- 
-                             <div class="card-image">
-                                     <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjxivAs4UknzmDfLBXGMxQkayiZDhR2ftB4jcIV7LEnIEStiUyMygioZnbLXCAND-I_xWQpVp0jv-dv9NVNbuKn4sNpXYtLIJk2-IOdWQNpC2Ldapnljifu0pnQqAWU848Ja4lT9ugQex-nwECEh3a96GXwiRXlnGEE6FFF_tKm66IGe3fzmLaVIoNL/s1600/img_avatar.png" alt="" class="card-img">
-                             </div>
-                         </div>
- 
-                     </div>
-                     <div class="card swiper-slide">
-                         <div class="image-content">
-                             <span class="overlay"></span>
- 
-                         <div class="card-image">
-                                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjxivAs4UknzmDfLBXGMxQkayiZDhR2ftB4jcIV7LEnIEStiUyMygioZnbLXCAND-I_xWQpVp0jv-dv9NVNbuKn4sNpXYtLIJk2-IOdWQNpC2Ldapnljifu0pnQqAWU848Ja4lT9ugQex-nwECEh3a96GXwiRXlnGEE6FFF_tKm66IGe3fzmLaVIoNL/s1600/img_avatar.png" alt="" class="card-img">                            </div>
-                         </div>
-                     </div>
+                     
                  </div>
              </div>
              <div class="button-flex">
@@ -406,25 +388,25 @@
            <div class="">
                <ul class="footer-list-styling">
                    <li class="strong-font-footer">Populære lande</li>
-                   <a href="/destinationer-brasilien.html"><li>Brasilien</li></a>
-                   <a href="/destinationer-chile.html"><li>Chile</li></a>
-                   <a href="/destinationer-japan.html"><li>Japan</li></a>
-                   <a href="/destinationer-spanien.html"><li>Spanien</li></a>
+                   <a class="hoverstreg-hvid" href="/destinationer-brasilien.html"><li>Brasilien</li></a>
+                   <a class="hoverstreg-hvid" href="/destinationer-chile.html"><li>Chile</li></a>
+                   <a class="hoverstreg-hvid" href="/destinationer-japan.html"><li>Japan</li></a>
+                   <a class="hoverstreg-hvid" href="/destinationer-spanien.html"><li>Spanien</li></a>
                </ul>
            </div>
            <div class="">
                <ul class="footer-list-styling">
-                <a href=""><li class="strong-font-footer">Gode rejsetips</li></a>
-                <a href="/rejsetips.html#pakkesektion"><li>Pak din kuffert</li></a>
-                <a href="/rejsetips.html#checkliste"><li>Tjekliste</li></a>
-                <a href="/rejsetips.html#tips"><li>10 nyttige tips</li></a>
+                <li class="strong-font-footer">Gode rejsetips</li>
+                <a class="hoverstreg-hvid" href="/rejsetips.html#pakkesektion"><li>Pak din kuffert</li></a>
+                <a class="hoverstreg-hvid" href="/rejsetips.html#checkliste"><li>Tjekliste</li></a>
+                <a class="hoverstreg-hvid" href="/rejsetips.html#tips"><li>10 nyttige tips</li></a>
                </ul>
            </div>
            <div class="">
                <ul class="footer-list-styling text-max-w">
                    <li class="strong-font-footer">Prøv vores quiz</li>
                    <li>Quizzen evaluerer din parathed til din kommende rejse.</li>
-                   <a href="/rejsetips.html#quizsek">Prøv nu ></a>
+                   <a class="hoverstreg-hvid" href="/rejsetips.html#quizsek">Prøv nu ></a>
                </ul>
            </div>
         </div>

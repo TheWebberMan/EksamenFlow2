@@ -58,6 +58,13 @@ h4 {
     color: #161718;
 }
 
+h5 {
+    font-weight: 300;
+    font-size:44px;
+    font-style: normal;
+    color: #FFFFFF;
+}
+
 p {
     font-size: 16px;
     font-weight: 400;
@@ -155,7 +162,7 @@ p {
 }
 
 .video-box {
-    height: 519px;
+    height: 300px;
     width: 100%;
     background-image: url('https://i.ibb.co/XYXGDn4/4fb723521fa14ea5d6abaf6539729b06-1-1.webp'); 
     background-color: #1E516B;
@@ -182,15 +189,15 @@ p {
 }
 
 .video-text-box {
-    width:90%;
-    height: 300px;
-    padding: 16px;
-    border-radius: 24px;
+    width: auto;
+    height: 75px;
+    padding: 16px 60px;
+    border-radius: 0 0 40px 40px;
     border: 1px solid rgba(165, 185, 196, 0.30);
     background-image: linear-gradient(to right, #7897A6B2, #123140B2);
     position: absolute;
     inset: 0;
-    margin: 200px auto 0 auto;
+    margin: 225px auto 0 auto;
     color: white;
     backdrop-filter: blur(0.5px); 
     
@@ -214,6 +221,12 @@ p {
 .video-text {
     color: white;
     opacity: 1;
+    text-align: start;
+    display: none;
+}
+
+.video-text-title {
+    text-align: center;
 }
 
 .text-box1 {
@@ -286,6 +299,13 @@ p {
 }
 
 @media only screen and (min-width: 767px) {
+
+    .video-text {
+        color: white;
+        opacity: 1;
+        text-align: start;
+        display: block;
+    }
 
     .big-grid-forside {
         gap: 140px;
@@ -449,6 +469,7 @@ p {
 
 .forside-video-styling {
     max-height: 361px;
+    min-height: 230px;
     min-width: 50%;
     border-radius: 40px;
     background-color: #1E516B;
@@ -481,9 +502,40 @@ p {
 /* Header DESKTOP start */
 
 /* nav DESKTOP start */
+
+.nav-img {
+    position: absolute;
+    top: 43px;
+}
+
+.video-text-box {
+    width:90%;
+    height: 300px;
+    padding: 16px;
+    border-radius: 24px;
+    border: 1px solid rgba(165, 185, 196, 0.30);
+    background-image: linear-gradient(to right, #7897A6B2, #123140B2);
+    position: absolute;
+    inset: 0;
+    margin: 200px auto 0 auto;
+    color: white;
+    backdrop-filter: blur(0.5px); 
+    
+}
+
+.video-text-title {
+    text-align: start;
+}
+
 .hoverstreg:hover {
 
-    text-decoration: underline 2px #1E516B
+    text-decoration: underline 2px #1E516B;
+
+}
+
+.hoverstreg-hvid:hover {
+
+    text-decoration: underline 2px #FFFFFF;
 
 }
 
@@ -536,8 +588,8 @@ p {
 
 .video-box {
     grid-area: video-box;
-    
-    max-height: 472.5px;
+    height: 463px;
+    max-height: 463px;
 }
 
 .video-box-forside {
@@ -1167,7 +1219,6 @@ grid-area: text-box1;
 
   .fly-icon {
     margin-right: 20px;
-    transform: translateX(-10px) ;
   }
 
   .streg {
@@ -1316,6 +1367,10 @@ button:hover {
 /* Destinationer header DESKTOP start */
 
 @media only screen and (min-width: 767px) {
+
+    .hamburger-nav {
+        display: none;
+    }
 
     .video-text-box-forside {
         margin: 415px auto 0 auto;
@@ -1972,120 +2027,203 @@ button:hover {
         text-decoration: none;
       }
       
-      .p-menu1{
-         height: 100%;
+      #container {
+        margin: 0 auto;
+        max-width: 890px;
       }
-      
-      
-      /* Hamburger */
-      .hamburger1 {
-        height: 30px;
-        margin: 10px;
-        display: -ms-grid;
-        display: grid;
-        grid-template-rows: repeat(3, 1fr);
-        justify-items: end;
-        z-index: 120;
-      }
-      
-      .hamburger1 div {
-        background-color: #1E516B;
-        position: relative;
-        width: 40px;
-        height: 3px;
-        margin-top: 7px;
-        -webkit-transition: all 0.2s ease-in-out;
-        transition: all 0.2s ease-in-out;
+      p { text-align: start; }
+       .toggle, [id^=drop] {
+       display: none;
       }
 
-      .navigation {
-        position: relative;
-      }
-      
-      #toggle1 {
-        display: none;
-      }
-      
-      #toggle1:checked + .hamburger1 .top {
-        -webkit-transform: rotate(-45deg);
-                transform: rotate(-45deg);
-        margin-top: 22.5px;
-      }
-      
-      #toggle1:checked + .hamburger1 .meat {
-        -webkit-transform: rotate(45deg);
-                transform: rotate(45deg);
-        margin-top: -5px;
-      }
-      
-      #toggle1:checked + .hamburger1 .bottom {
-        -webkit-transform: scale(0);
-                transform: scale(0);
-      }
-      
-      #toggle1:checked ~ .menu1 {
-        height: 68dvh;
-        /* position: fixed;
-        top: 40px; */
-      }
-      
-      
-      /* Menu */
-      .menu1 {
-        width: 100%;
-        background-color: #1E516B;
+      p { text-align: start; }
+      .toggle1, [id^=drop] {
+      display: none;
+     }
+
+     p { text-align: start; }
+      .toggle2, [id^=drop] {
+      display: none;
+     }
+
+      nav {
         margin: 0;
-        border-radius: 40px;
-        display: -ms-grid;
-        display: grid;
-        grid-template-rows: 1fr repeat(3, 0.7fr);
-        grid-row-gap: 25px;
         padding: 0;
-        list-style: none;
+        background-color: #1E516B;
+      }
+      
+      #logo {
+        display: block;
+        padding: 0 30px;
+        float: left;
+        font-size: 20px;
+        line-height: 60px;
+      }
+      
+      nav:after {
+        content: "";
+        display: table;
         clear: both;
-        text-align: center;
-        height: 0px;
-        overflow: hidden;
-        transition: height .4s ease;
-        z-index: 120;
-        -webkit-transition: all 0.3s ease;
-        transition: all 0.3s ease;
       }
       
-      .menu1 a:first-child {
-        margin-top: 40px;
-      }
-      
-      .menu1 a:last-child {
-        margin-bottom: 40px;
-      }
-      
-      .link1 {
-        width: 100%;
-        height: 50px;
+      nav ul {
+        float: left;
+        padding: 0;
         margin: 0;
-        padding: 10px 0;
-        font: 700 20px 'Oswald', sans-serif;
-        
+        list-style: none;
+        position: relative;
+      }
+      
+      nav ul li {
+        margin: 0px;
+        display: inline-block;
+        float: left;
+        background-color: #1E516B;
+      }
+      
+      nav a {
+        display: block;
+        padding: 0 20px;
+        color: #FFF;
+        font-size: 20px;
+        line-height: 60px;
+        text-decoration: none;
+      }
+      
+      nav ul li ul li:hover { background: #000000; }
+      
+      nav a:hover { background-color: #000000; }
+      
+      nav ul ul {
+        display: none;
+        position: absolute;
+        top: 60px;
+      }
+      
+      nav ul li:hover > ul { display: inherit; }
+      
+      nav ul ul li {
+        width: 170px;
+        float: none;
+        display: list-item;
+        position: relative;
+      }
+      
+      nav ul ul ul li {
+        position: relative;
+        top: -60px;
+        left: 170px;
+      }
+      
+      li > a:after { content: ' +'; }
+      
+      li > a:only-child:after { content: ''; }
+      
+      
+      /* Media Queries
+      --------------------------------------------- */
+      
+      .hamburger-nav {
+       position: relative;
+       min-height: 70px;
       }
 
-.active-continent {
-    background-color: #5D8E99; /* Lys grå for at fremhæve det åbne kontinent */
-    width: fit-content;
-    margin: 20px auto 40px auto;
-    padding: 4px 9px;
-    border-radius: 20px;
+      .hamburger-bars {  
+       height: 45px;
+       top: 13px;
+       right: 10px;
+       position: absolute;
+       pointer-events: none;
+      }
+
+      .hamburger-logo {
+        height: 45px;
+        top: 13px;
+        left: 10px;
+        position: absolute;
+      }
+
+      #logo {
+        display: block;
+        padding: 0;
+        width: 100%;
+        text-align: center;
+        float: none;
+      }
+      
+      nav { margin: 0; }
+      
+      .toggle + input,
+.toggle1 + input,
+.toggle2 + input,
+.menu { display: none; }
+
+.toggle,
+.toggle1,
+.toggle2 {
+  display: block;
+  background-color: #1E516B;
+  padding: 0 20px;
+  color: #FFF;
+  font-size: 22px;
+  font-weight:bold;
+  line-height: 60px;
+  text-decoration: none;
+  border: none;
 }
 
-.continent-menu {
-    display: none; /* Skjuler kontinenterne som standard */
+.toggle:hover,
+.toggle1:hover,
+.toggle2:hover { background-color: #1E516B; }
+
+[id^=drop]:checked + ul { display: block; }
+
+nav ul li {
+  display: block;
+  width: 100%;
 }
 
-.burger-menu-dropdown-text {
-    color: #FFFFFF; 
-    font-size: 16px;
-    margin-bottom: 3px;
+nav ul ul .toggle,
+nav ul ul .toggle1,
+nav ul ul .toggle2,
+nav ul ul a { padding: 0 40px; }
+
+nav ul ul ul a { padding: 0 80px; }
+
+nav a:hover,
+nav ul ul ul a { background-color: #1E516B; }
+
+nav ul li ul li .toggle,
+nav ul li ul li .toggle1,
+nav ul li ul li .toggle2,
+nav ul ul a { background-color: #1E516B; }
+
+nav ul ul {
+  float: none;
+  position: static;
+  color: #ffffff;
 }
+
+nav ul ul li:hover > ul,
+nav ul li:hover > ul { display: none; }
+
+nav ul ul li {
+  display: block;
+  width: 100%;
+}
+
+nav ul ul ul li { position: static;
+}
+      
+      
+      
+      
+      nav ul li {
+        display: block;
+        width: 94%;
+      }
+      
+      
 
 
 }
@@ -2167,8 +2305,34 @@ button:hover {
 
 /* Forside TABLET start */
 
-@media only screen and (min-width: 600px) and (max-width: 1030px) {
+@media only screen and (min-width: 735px) and (max-width: 1030px) {
 
+
+    .video-text-box {
+        width:90%;
+        height: 300px;
+        padding: 16px;
+        border-radius: 24px;
+        border: 1px solid rgba(165, 185, 196, 0.30);
+        background-image: linear-gradient(to right, #7897A6B2, #123140B2);
+        position: absolute;
+        inset: 0;
+        margin: 200px auto 0 auto;
+        color: white;
+        backdrop-filter: blur(0.5px); 
+        
+    }
+
+    .video-text-title {
+        text-align: start;
+    }
+
+    .video-text {
+        color: white;
+        opacity: 1;
+        text-align: start;
+        display: block;
+    }
 
     .videobox-grid {
             display: grid;
@@ -2209,7 +2373,7 @@ button:hover {
 
     .video-text-box {
         height: 220px;
-        margin: 380px auto 0 auto;
+        margin: 220px auto 0 auto;
     }
 
     .slide-container.swiper {

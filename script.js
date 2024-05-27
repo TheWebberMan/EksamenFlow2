@@ -217,7 +217,7 @@ function showResult() {
         result = "Fantastisk! Du er en rejseforberedelsesmester. Du er klar til din næste rejse!";
     }
 
-    var output = `<h2>Resultat</h2>`;
+    var output = `<h5>Resultat</h5>`;
     questions.forEach((question, index) => {
         output += `<div class="question">${index + 1}. ${question.question}</div>`;
         output += `<div>Dit svar: ${userAnswers[index] ? "Sand" : "Falsk"}</div>`;
